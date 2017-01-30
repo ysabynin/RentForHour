@@ -1,0 +1,23 @@
+<md-sidenav-container>
+  <md-sidenav #sidenav mode="push" opened="true">
+    <md-toolbar color="primary">
+      <span>Menu</span>
+      <md-toolbar-row>
+        <a routerLink="/dashboard" md-button>Welcome</a>
+        <span class="example-spacer"></span>
+        <md-icon class="example-icon">favourite</md-icon>
+      </md-toolbar-row>
+
+      <md-toolbar-row>
+        <a routerLink="/heroes" md-button	>Apartments</a>
+        <span class="example-spacer"></span>
+        <md-icon class="example-icon">home</md-icon>
+      </md-toolbar-row>
+    </md-toolbar>
+  </md-sidenav>
+
+  <div class="my-content example-sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+</md-sidenav-container>
+
