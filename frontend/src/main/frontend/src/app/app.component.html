@@ -1,3 +1,4 @@
+
 <md-sidenav-container>
   <md-sidenav #sidenav mode="push" opened="true">
     <md-toolbar color="primary">
@@ -9,7 +10,7 @@
       </md-toolbar-row>
 
       <md-toolbar-row>
-        <a routerLink="/heroes" md-button	>Apartments</a>
+        <a routerLink="/heroes" md-button>Apartments</a>
         <span class="example-spacer"></span>
         <md-icon class="example-icon">home</md-icon>
       </md-toolbar-row>
@@ -17,7 +18,12 @@
   </md-sidenav>
 
   <div class="my-content example-sidenav-content">
-    <router-outlet></router-outlet>
   </div>
 </md-sidenav-container>
+
+
+<!--<md-toolbar color="primary">
+  Angular Material 2 App
+</md-toolbar>-->
+<router-outlet></router-outlet>
 

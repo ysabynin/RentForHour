@@ -19,8 +19,11 @@
       "mobile": false,
       "styles": [
         "styles.css"
+//        "../node_modules/bootstrap-material-design-4.0.2/dist/bootstrap-material-design.css"
       ],
-      "scripts": [],
+      "scripts": [
+
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
