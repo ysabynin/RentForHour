@@ -1,0 +1,12 @@
+.parent-form{
+  padding: 0 15px;
+}
+
+.form-signin{
+  max-width: 25rem;
+  padding: 2rem 1rem 1rem;
+}
+
+.text-center{
+  text-align: center;
+}

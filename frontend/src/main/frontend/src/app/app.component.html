@@ -1,29 +1,53 @@
+<div class="bmd-layout-canvas">
+  <div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay-md-down bmd-drawer-in-lg-up">
+    <header class="bmd-layout-header">
+      <div class="navbar navbar-light bg-faded" style="height: 50px">
+        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="drawer" data-target="#dw-1"
+                aria-expanded="false">
+          <span class="sr-only">Toggle drawer</span>
+          <i class="material-icons">menu</i>
+        </button>
+        <ul class="nav navbar-nav">
+          <li class="navbar-brand">LOGO</li>
+        </ul>
 
-<md-sidenav-container>
-  <md-sidenav #sidenav mode="push" opened="true">
-    <md-toolbar color="primary">
-      <span>Menu</span>
-      <md-toolbar-row>
-        <a routerLink="/dashboard" md-button>Welcome</a>
-        <span class="example-spacer"></span>
-        <md-icon class="example-icon">favourite</md-icon>
-      </md-toolbar-row>
+      </div>
+    </header>
 
-      <md-toolbar-row>
-        <a routerLink="/heroes" md-button>Apartments</a>
-        <span class="example-spacer"></span>
-        <md-icon class="example-icon">home</md-icon>
-      </md-toolbar-row>
-    </md-toolbar>
-  </md-sidenav>
+    <div id="dw-1" class="bmd-layout-drawer bg-faded" aria-expanded="false" aria-hidden="true">
+      <header style="background-color: #74a4be; color: white">
+        <a class="navbar-brand">MENU</a>
+      </header>
 
-  <div class="my-content example-sidenav-content">
+      <ul class="list-group">
+        <a routerLink="/dashboard" class="list-group-item">
+          <i class="material-icons">home</i>
+          Welcome
+        </a>
+
+        <a routerLink="/heroes" class="list-group-item">
+          <i class="material-icons">home</i>
+          Home
+        </a>
+
+        <a routerLink="/heroes" class="list-group-item">
+          <i class="material-icons">settings</i>
+          Settings
+        </a>
+
+        <a href="#" class="list-group-item">
+          <i class="material-icons">exit_to_app</i>
+          Logout
+        </a>
+      </ul>
+    </div>
+
+
+    <main class="bmd-layout-content">
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
   </div>
-</md-sidenav-container>
-
-
-<!--<md-toolbar color="primary">
-  Angular Material 2 App
-</md-toolbar>-->
-<router-outlet></router-outlet>
+</div>
 

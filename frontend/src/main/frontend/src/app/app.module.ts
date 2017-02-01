@@ -18,7 +18,6 @@ import {HeroService} from "./hero.service";
 import {DashboardComponent} from "./welcome/dashboard.component";
 import {HeroSearchComponent} from "./hero-search.component";
 import {HeroSearchService} from "./hero-search.service";
-import {MaterialModule} from "@angular/material";
 import {SidenavComponent} from "./sidenav/sidenav.component";
 
 
@@ -36,7 +35,6 @@ import {SidenavComponent} from "./sidenav/sidenav.component";
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
-    MaterialModule.forRoot(),
     AppRoutingModule
   ],
   providers: [HeroService, HeroSearchService],
