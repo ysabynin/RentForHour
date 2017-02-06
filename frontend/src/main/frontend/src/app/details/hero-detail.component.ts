@@ -12,6 +12,10 @@ import "rxjs/add/operator/switchMap";
   styleUrls: ['hero-detail.component.html']
 })
 export class HeroDetailComponent implements OnInit {
+  public max: number = 10;
+  public rate: number = 7;
+  public isReadonly: boolean = true;
+
   @Input()
   hero:Hero;
 
