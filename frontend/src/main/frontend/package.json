@@ -28,13 +28,7 @@
     "rxjs": "^5.0.1",
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.7.2",
-    "jquery": "^3.1.0",
-    "tether": "1.4.0",
-    "arrive":"2.3.1",
-    "bootstrap":"4.0.0-alpha.6",
-    "bootstrap-material-design":"0.5.10",
-    "material-design-icons":"^3.0.1"
-
+    "ng2-bootstrap": "latest"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^2.3.1",

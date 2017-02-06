@@ -18,12 +18,10 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "custom/bootstrap-material-design.min.css"
+        "../node_modules/bootstrap/dist/css/bootstrap.css"
       ],
       "scripts": [
-        "../node_modules/jquery/dist/jquery.js",
-        "../node_modules/tether/dist/js/tether.min.js",
-        "../node_modules/arrive/minified/arrive.min.js"
+
       ],
       "environments": {
         "source": "environments/environment.ts",

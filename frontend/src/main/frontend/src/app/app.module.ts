@@ -20,6 +20,19 @@ import {HeroSearchComponent} from "./hero-search.component";
 import {HeroSearchService} from "./hero-search.service";
 import {SidenavComponent} from "./sidenav/sidenav.component";
 
+import {
+  AlertModule,
+  ButtonsModule,
+  DropdownModule,
+  PaginationModule,
+  ProgressbarModule,
+  RatingModule,
+  TabsModule,
+  TooltipModule,
+  ModalModule,
+  TypeaheadModule
+} from 'ng2-bootstrap';
+import {NavbarComponent} from "./navbar/navbar.component";
 
 @NgModule({
   declarations: [
@@ -28,14 +41,18 @@ import {SidenavComponent} from "./sidenav/sidenav.component";
     HeroesComponent,
     HeroDetailComponent,
     HeroSearchComponent,
-    SidenavComponent
+    SidenavComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
-    AppRoutingModule
+    AppRoutingModule,
+    ButtonsModule.forRoot(),
+    TypeaheadModule.forRoot()
+
   ],
   providers: [HeroService, HeroSearchService],
   bootstrap: [AppComponent]
