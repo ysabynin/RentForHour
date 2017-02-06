@@ -30,7 +30,7 @@ import {
   TabsModule,
   TooltipModule,
   ModalModule,
-  TypeaheadModule
+  TypeaheadModule, CarouselModule
 } from 'ng2-bootstrap';
 import {NavbarComponent} from "./navbar/navbar.component";
 
@@ -51,8 +51,10 @@ import {NavbarComponent} from "./navbar/navbar.component";
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule,
     ButtonsModule.forRoot(),
-    TypeaheadModule.forRoot()
-
+    TypeaheadModule.forRoot(),
+    DropdownModule.forRoot(),
+    RatingModule.forRoot(),
+    CarouselModule.forRoot()
   ],
   providers: [HeroService, HeroSearchService],
   bootstrap: [AppComponent]
