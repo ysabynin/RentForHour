@@ -12,7 +12,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
 import {AppComponent} from "./app.component";
-import {HeroesComponent} from "./apartments/heroes.component";
+import {HeroesComponent} from "./heroes/heroes.component";
 import {HeroDetailComponent} from "./details/hero-detail.component";
 import {HeroService} from "./hero.service";
 import {DashboardComponent} from "./welcome/dashboard.component";
@@ -33,6 +33,8 @@ import {
   TypeaheadModule, CarouselModule
 } from 'ng2-bootstrap';
 import {NavbarComponent} from "./navbar/navbar.component";
+import {ProfileModule} from "./profile/profile.module";
+
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import {NavbarComponent} from "./navbar/navbar.component";
     TypeaheadModule.forRoot(),
     DropdownModule.forRoot(),
     RatingModule.forRoot(),
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    TypeaheadModule.forRoot(),
+    ProfileModule
   ],
   providers: [HeroService, HeroSearchService],
   bootstrap: [AppComponent]
