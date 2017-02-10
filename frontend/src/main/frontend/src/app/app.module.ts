@@ -9,16 +9,11 @@ import {AppRoutingModule} from "./app-routing.module";
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+import { InMemoryDataService }  from './service/in-memory-data.service';
 
 import {AppComponent} from "./app.component";
-import {HeroesComponent} from "./heroes/heroes.component";
-import {HeroDetailComponent} from "./details/hero-detail.component";
-import {HeroService} from "./hero.service";
-import {DashboardComponent} from "./welcome/dashboard.component";
-import {HeroSearchComponent} from "./hero-search.component";
-import {HeroSearchService} from "./hero-search.service";
-import {SidenavComponent} from "./sidenav/sidenav.component";
+import {HeroService} from "./service/hero.service";
+import {HeroSearchService} from "./service/hero-search.service";
 
 import {
   AlertModule,
@@ -33,17 +28,14 @@ import {
   TypeaheadModule, CarouselModule
 } from 'ng2-bootstrap';
 import {NavbarComponent} from "./navbar/navbar.component";
-import {ProfileModule} from "./profile/profile.module";
+import {CabinetModule} from "./cabinet/cabinet.module";
+import {ApartmentsModule} from "./apartments/apartments.module";
+import {ApartmentDetailsModule} from "./apartment-details/apartment-details.module";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
-    HeroesComponent,
-    HeroDetailComponent,
-    HeroSearchComponent,
-    SidenavComponent,
     NavbarComponent
   ],
   imports: [
@@ -58,7 +50,9 @@ import {ProfileModule} from "./profile/profile.module";
     RatingModule.forRoot(),
     CarouselModule.forRoot(),
     TypeaheadModule.forRoot(),
-    ProfileModule
+    ApartmentsModule,
+    ApartmentDetailsModule,
+    CabinetModule
   ],
   providers: [HeroService, HeroSearchService],
   bootstrap: [AppComponent]

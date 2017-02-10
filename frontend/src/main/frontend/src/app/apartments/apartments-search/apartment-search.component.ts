@@ -1,16 +1,16 @@
-import {HeroSearchService} from "./hero-search.service";
+import {HeroSearchService} from "../../service/hero-search.service";
 import {OnInit, Component} from "@angular/core";
-import {Hero} from "./domain/hero";
+import {Hero} from "../../domain/hero";
 import {Router} from "@angular/router";
 import {Subject, Observable} from "rxjs/Rx";
 @Component({
   moduleId: module.id,
-  selector: 'hero-search',
-  templateUrl: 'hero-search-component.html',
-  styleUrls: ['hero-search.component.css'],
+  selector: 'apartment-search',
+  templateUrl: 'apartment-search-component.html',
+  styleUrls: ['apartment-search.component.css'],
   providers: [HeroSearchService]
 })
-export class HeroSearchComponent implements OnInit {
+export class ApartmentsSearchComponent implements OnInit {
   heroes:Observable<Hero[]>;
   private searchTerms = new Subject<string>();
 
@@ -32,7 +32,7 @@ export class HeroSearchComponent implements OnInit {
         return Observable.of<Hero[]>([]);
       })
   }
-
+l
   gotoDetail(hero:Hero):void {
     let link = ['/detail', hero.id];
     this.router.navigate(link);
