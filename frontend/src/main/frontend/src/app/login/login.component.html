@@ -1,15 +1,32 @@
-<form class="card form-signin m-x-auto" method="POST" action="Login/Handle.do" role="form">
-  <fieldset>
-    <div class="form-group bmd-form-group">
-      <label class="bmd-label-static" for="tbUser">Username</label>
-      <input id="tbUser" type="text" name="j_username" class="form-control"/>
-    </div>
-    <div class="form-group bmd-form-group">
-      <label class="bmd-label-static" for="tbPass">Password</label>
-      <input id="tbPass" type="password" name="j_password" class="form-control"/>
-    </div>
-    <div class="formd-group text-center">
-      <input type="submit" class="btn btn-lg btn-primary" id="btOk" value="Login"/>
-    </div>
-  </fieldset>
-</form>
+<div class="">
+  <h2>Login</h2>
+  <form class="card form-signin m-x-auto " #loginForm="ngForm" (ngSubmit)="login()">
+    <fieldset>
+      <div class="form-group">
+        <label class="bmd-label-static" for="username">Почта</label>
+        <input id="username" type="text" name="username" class="form-control" required
+               [(ngModel)]="user.username" #username="ngModel"
+        />
+        <div *ngIf="loginForm.submitted && !username.valid"
+             class="alert alert-danger">
+          Введите логин
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="bmd-label-static" for="password">Пароль</label>
+        <input id="password" type="password" name="password" class="form-control" required
+               [(ngModel)]="user.password" #password="ngModel"
+        />
+        <div *ngIf="loginForm.submitted && !password.valid"
+             class="alert alert-danger">
+          Введить пароль
+        </div>
+      </div>
+      <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary" [disabled]="!loginForm.form.valid">Войти</button>
+        <a class="btn btn-link" [routerLink]="['/register']">Регистрация</a>
+      </div>
+    </fieldset>
+  </form>
+
+</div>

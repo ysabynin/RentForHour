@@ -31,6 +31,7 @@ import {NavbarComponent} from "./navbar/navbar.component";
 import {CabinetModule} from "./cabinet/cabinet.module";
 import {ApartmentsModule} from "./apartments/apartments.module";
 import {ApartmentDetailsModule} from "./apartment-details/apartment-details.module";
+import {LoginModule} from "./login/login.module";
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import {ApartmentDetailsModule} from "./apartment-details/apartment-details.modu
     TypeaheadModule.forRoot(),
     ApartmentsModule,
     ApartmentDetailsModule,
-    CabinetModule
+    CabinetModule,
+    LoginModule
   ],
   providers: [HeroService, HeroSearchService],
   bootstrap: [AppComponent]
