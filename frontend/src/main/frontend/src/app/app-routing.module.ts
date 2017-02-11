@@ -4,6 +4,8 @@ import {CabinetComponent} from "./cabinet/cabinet.component";
 import {ApartmentsComponent} from "./apartments/apartments.component";
 import {ApartmentDetailsComponent} from "./apartment-details/apartment-details.component";
 import {LoginComponent} from "./login/login.component";
+import {RegisterApartmentComponent} from "./register/apartment/register-apartment.component";
+import {RegisterUserComponent} from "./register/user/register-user.component";
 
 const routes: Routes = [
   {
@@ -26,6 +28,14 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'register/user',
+    component: RegisterUserComponent
+  },
+  {
+    path: 'register/apartment',
+    component: RegisterApartmentComponent
   }
 ];
 

@@ -1,0 +1,21 @@
+.parent-form {
+  padding: 0 15px;
+}
+
+.form-register-user {
+  margin: 4rem auto;
+  max-width: 25rem;
+  padding: 2rem 1rem 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.ng-valid[required], .ng-valid.required {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442; /* red */
+}

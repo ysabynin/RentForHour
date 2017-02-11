@@ -32,6 +32,7 @@ import {CabinetModule} from "./cabinet/cabinet.module";
 import {ApartmentsModule} from "./apartments/apartments.module";
 import {ApartmentDetailsModule} from "./apartment-details/apartment-details.module";
 import {LoginModule} from "./login/login.module";
+import {RegisterModule} from "./register/register.module";
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import {LoginModule} from "./login/login.module";
     ApartmentsModule,
     ApartmentDetailsModule,
     CabinetModule,
-    LoginModule
+    LoginModule,
+    RegisterModule
   ],
   providers: [HeroService, HeroSearchService],
   bootstrap: [AppComponent]
