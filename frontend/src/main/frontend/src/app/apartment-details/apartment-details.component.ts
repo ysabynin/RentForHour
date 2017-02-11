@@ -1,17 +1,16 @@
 import {Component, Input, OnInit} from "@angular/core";
 import {Hero} from "../domain/hero";
-import {HeroService} from "../hero.service";
+import {HeroService} from "../service/hero.service";
 import {ActivatedRoute, Params} from "@angular/router";
 import {Location} from '@angular/common';
 import "rxjs/add/operator/switchMap";
 
 @Component({
-  moduleId: module.id,
-  selector: 'my-hero-detail',
-  templateUrl: 'hero-detail.component.html',
-  styleUrls: ['hero-detail.component.html']
+  selector: 'app-apartment-details',
+  templateUrl: './apartment-details.component.html',
+  styleUrls: ['./apartment-details.component.css']
 })
-export class HeroDetailComponent implements OnInit {
+export class ApartmentDetailsComponent implements OnInit {
   public max: number = 10;
   public rate: number = 7;
   public isReadonly: boolean = true;
