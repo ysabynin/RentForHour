@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {HeroService} from "../service/hero.service";
-import {Hero} from "../domain/hero";
+import {ApartmentService} from "./apartment.service";
+import {Apartment} from "../domain/apartment";
 
 @Component({
   selector: 'app-apartments',
@@ -9,12 +9,12 @@ import {Hero} from "../domain/hero";
 })
 export class ApartmentsComponent implements OnInit {
 
-  heroes: Hero[] = [];
+  apartments: Apartment[] = [];
 
-  constructor(private  heroService: HeroService){}
+  constructor(private  apartmentService: ApartmentService){}
 
   ngOnInit(): void {
-    this.heroService.getHeroes().then(heroes => this.heroes = heroes.slice(1,5));
+    this.apartmentService.getApartments().then(apartments => this.apartments = apartments);
   }
 
 }

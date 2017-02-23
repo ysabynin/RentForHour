@@ -11,15 +11,15 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let hero of heroes">
+      <tr *ngFor="let apartment of apartments">
         <td>
-          <a href="#" [routerLink]="['/apartments', hero.id]">{{hero.name}}</a>
+          <a href="#" [routerLink]="['/apartments', apartment.id]">{{apartment.name}}</a>
         </td>
         <td>
-          <a href="#" [routerLink]="['/apartments', hero.id]">{{hero.name}}</a>
+          <a href="#" [routerLink]="['/apartments', apartment.id]">{{apartment.adress}}</a>
         </td>
         <td>
-          <a href="#" [routerLink]="['/apartments', hero.id]">{{hero.name}}</a>
+          <a href="#" [routerLink]="['/apartments', apartment.id]">{{apartment.cost}}</a>
         </td>
       </tr>
       </tbody>

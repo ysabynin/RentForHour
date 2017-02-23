@@ -1,18 +1,14 @@
 import {BrowserModule} from "@angular/platform-browser";
 import {NgModule} from "@angular/core";
 import {FormsModule} from "@angular/forms";
-import {HttpModule} from "@angular/http";
+import {HttpModule, JsonpModule} from "@angular/http";
 import './rxjs-extensions';
 
 
 import {AppRoutingModule} from "./app-routing.module";
 
-// Imports for loading & configuring the in-memory web api
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './service/in-memory-data.service';
-
 import {AppComponent} from "./app.component";
-import {HeroService} from "./service/hero.service";
+import {ApartmentService} from "./apartments/apartment.service";
 import {HeroSearchService} from "./service/hero-search.service";
 
 import {
@@ -44,7 +40,7 @@ import {RegisterModule} from "./register/register.module";
     BrowserModule,
     FormsModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    JsonpModule,
     AppRoutingModule,
     ButtonsModule.forRoot(),
     TypeaheadModule.forRoot(),
@@ -58,7 +54,7 @@ import {RegisterModule} from "./register/register.module";
     LoginModule,
     RegisterModule
   ],
-  providers: [HeroService, HeroSearchService],
+  providers: [ApartmentService, HeroSearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

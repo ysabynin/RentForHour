@@ -1,6 +1,6 @@
 import {HeroSearchService} from "../../service/hero-search.service";
 import {OnInit, Component} from "@angular/core";
-import {Hero} from "../../domain/hero";
+import {Apartment} from "../../domain/apartment";
 import {Router} from "@angular/router";
 import {Subject, Observable} from "rxjs/Rx";
 @Component({
@@ -11,7 +11,7 @@ import {Subject, Observable} from "rxjs/Rx";
   providers: [HeroSearchService]
 })
 export class ApartmentsSearchComponent implements OnInit {
-  heroes:Observable<Hero[]>;
+  heroes:Observable<Apartment[]>;
   private searchTerms = new Subject<string>();
 
   constructor(
@@ -26,14 +26,14 @@ export class ApartmentsSearchComponent implements OnInit {
     this.heroes = this.searchTerms
       .debounceTime(300)
       .distinctUntilChanged()
-      .switchMap(term => term ? this.heroSearchService.search(term) : Observable.of<Hero[]>([]))
+      .switchMap(term => term ? this.heroSearchService.search(term) : Observable.of<Apartment[]>([]))
       .catch(error => {
         console.log(error);
-        return Observable.of<Hero[]>([]);
+        return Observable.of<Apartment[]>([]);
       })
   }
 l
-  gotoDetail(hero:Hero):void {
+  gotoDetail(hero:Apartment):void {
     let link = ['/detail', hero.id];
     this.router.navigate(link);
   }

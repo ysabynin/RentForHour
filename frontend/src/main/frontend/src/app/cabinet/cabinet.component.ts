@@ -1,7 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {Router} from "@angular/router";
-import {Hero} from "../domain/hero";
-import {HeroService} from "../service/hero.service";
+import {Apartment} from "../domain/apartment";
+import {ApartmentService} from "../apartments/apartment.service";
 
 @Component({
   selector: 'app-cabinet',
@@ -10,14 +10,14 @@ import {HeroService} from "../service/hero.service";
 })
 export class CabinetComponent implements OnInit {
   title = 'Tour of Heroes1';
-  heroes:Hero[];
-  selectedHero:Hero;
+  heroes:Apartment[];
+  selectedHero:Apartment;
 
   constructor(private router:Router,
-              private heroService:HeroService) {
+              private apartmentService:ApartmentService) {
   };
 
-  onSelect(hero:Hero):void {
+  onSelect(hero:Apartment):void {
     this.selectedHero = hero;
   }
 
@@ -26,15 +26,15 @@ export class CabinetComponent implements OnInit {
     if (!name) {
       return;
     }
-    this.heroService.create(name)
+    this.apartmentService.create(name)
       .then(hero => {
         this.heroes.push(hero);
         this.selectedHero = null;
       })
   }
 
-  delete(hero: Hero): void {
-    this.heroService
+  delete(hero: Apartment): void {
+    this.apartmentService
       .delete(hero.id)
       .then(() => {
         this.heroes = this.heroes.filter(h => h !== hero);
@@ -47,7 +47,7 @@ export class CabinetComponent implements OnInit {
   }
 
   getHeroes():void {
-    this.heroService.getHeroes().then(heroes => this.heroes = heroes);
+    this.apartmentService.getApartments().then(heroes => this.heroes = heroes);
   }
 
   ngOnInit():void {

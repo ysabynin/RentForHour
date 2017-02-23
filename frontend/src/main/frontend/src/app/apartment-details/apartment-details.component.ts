@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from "@angular/core";
-import {Hero} from "../domain/hero";
-import {HeroService} from "../service/hero.service";
+import {Apartment} from "../domain/apartment";
+import {ApartmentService} from "../apartments/apartment.service";
 import {ActivatedRoute, Params} from "@angular/router";
 import {Location} from '@angular/common';
 import "rxjs/add/operator/switchMap";
@@ -16,9 +16,9 @@ export class ApartmentDetailsComponent implements OnInit {
   public isReadonly: boolean = true;
 
   @Input()
-  hero:Hero;
+  hero:Apartment;
 
-  constructor(private heroService:HeroService,
+  constructor(private heroService:ApartmentService,
               private route:ActivatedRoute,
               private location:Location) {
   }
