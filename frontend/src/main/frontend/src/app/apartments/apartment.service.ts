@@ -41,12 +41,13 @@ export class ApartmentService {
       .catch(this.handleError);
   }
 
-  getHero(id:number):Promise<Apartment> {
-    const url = `${this.apiURL}/${id}`;
+  getApartment(id:string):Promise<Apartment> {
+    console.log(id)
+    const url = `${this.apiURL}/apartments/${id}`;
     console.log(url);
     return this.http.get(url)
       .toPromise()
-      .then(response => response.json().data as Apartment)
+      .then(response => response.json() as Apartment)
       .catch(this.handleError);
   }
 

@@ -11,5 +11,6 @@ import java.util.List;
  */
 public interface ApartmentRepository extends MongoRepository<Apartment, String> {
     List<Apartment> findAll();
+    Apartment findById(String id);
 }
 
