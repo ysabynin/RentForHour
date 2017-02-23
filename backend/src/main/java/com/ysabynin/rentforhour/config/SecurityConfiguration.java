@@ -1,3 +1,4 @@
+/*
 package com.ysabynin.rentforhour.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,11 +23,14 @@ import javax.servlet.Filter;
 import java.util.ArrayList;
 import java.util.List;
 
+*/
 /**
  * Created by ysabynin on 11.02.2017.
- */
+ *//*
+
 @Component
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
+*/
 /*    @Autowired
     OAuth2ClientContext oAuth2ClientContext;
 
@@ -85,14 +89,21 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 
         filter.setFilters(filters);
         return filter;
-    }*/
+    }*//*
+
 
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http/*.addFilterBefore(ssoFilter(), BasicAuthenticationFilter.class).antMatcher("*//**")*/
+        http*/
+/*.addFilterBefore(ssoFilter(), BasicAuthenticationFilter.class).antMatcher("*//*
+*/
+/**")*//*
+
                 .authorizeRequests()
-                    .antMatchers("/","/login/**").permitAll().anyRequest().authenticated()
+                    .antMatchers("/","/login*/
+/**").permitAll().anyRequest().authenticated()
                 .and().logout().logoutSuccessUrl("/").permitAll();
     }
 }
+*/
