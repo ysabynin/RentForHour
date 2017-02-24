@@ -1,25 +1,25 @@
 <div class="container" style="margin-top: 4rem">
-  <h2>My Apartments</h2>
+  <h2>Мои Объекты</h2>
   <ul class="list-group">
-    <li *ngFor="let hero of heroes" class="list-group-item"
-        [class.selected]="hero === selectedHero"
-        (click)="onSelect(hero)">
-      <span class="badge">{{hero.id}}</span>
-      <span>{{hero.name}}</span>
-      <button class="delete"
-              (click)="delete(hero); $event.stopPropagation()">x
+    <li *ngFor="let apartment of apartments" class="list-group-item"
+        [class.selected]="apartment === selectedApartment"
+        (click)="onSelect(apartment)">
+      <span class="badge">{{apartment.id}}</span>
+      <span>{{apartment.name}}</span>
+      <button class="delete btn btn-primary"
+              (click)="delete(apartment); $event.stopPropagation()">x
       </button>
     </li>
   </ul>
-  <div *ngIf="selectedHero">
+  <div *ngIf="selectedApartment">
     <h2>
-      {{selectedHero.name | uppercase}} is my hero
+      {{selectedApartment.name | uppercase}} is my apartment
     </h2>
     <button (click)="gotoDetail()">View Details</button>
   </div>
   <div>
-    <label>Apartment name:</label><input #heroName/>
-    <button (click)="add(heroName.value); heroName.value=''">
+    <label>Apartment name:</label><input #apartmentName/>
+    <button class="btn btn-primary" (click)="add(apartmentName.value); apartmentName.value=''">
       Add
     </button>
   </div>

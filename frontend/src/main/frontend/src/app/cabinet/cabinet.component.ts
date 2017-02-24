@@ -9,16 +9,16 @@ import {ApartmentService} from "../apartments/apartment.service";
   styleUrls: ['./cabinet.component.css']
 })
 export class CabinetComponent implements OnInit {
-  title = 'Tour of Heroes1';
-  heroes:Apartment[];
-  selectedHero:Apartment;
+  title = 'Apartment';
+  apartments:Apartment[];
+  selectedApartment:Apartment;
 
   constructor(private router:Router,
               private apartmentService:ApartmentService) {
   };
 
   onSelect(hero:Apartment):void {
-    this.selectedHero = hero;
+    this.selectedApartment = hero;
   }
 
   add(name:String):void {
@@ -27,27 +27,27 @@ export class CabinetComponent implements OnInit {
       return;
     }
     this.apartmentService.create(name)
-      .then(hero => {
-        this.heroes.push(hero);
-        this.selectedHero = null;
+      .then(apartment => {
+        this.apartments.push(apartment);
+        this.selectedApartment = null;
       })
   }
 
-  delete(hero: Apartment): void {
+  delete(apartment: Apartment): void {
     this.apartmentService
-      .delete(hero.id)
+      .delete(apartment.id)
       .then(() => {
-        this.heroes = this.heroes.filter(h => h !== hero);
-        if (this.selectedHero === hero) { this.selectedHero = null; }
+        this.apartments = this.apartments.filter(a => a !== apartment);
+        if (this.selectedApartment === apartment) { this.selectedApartment = null; }
       });
   }
 
   gotoDetail():void {
-    this.router.navigate(['/detail', this.selectedHero.id]);
+    this.router.navigate(['/detail', this.selectedApartment.id]);
   }
 
   getHeroes():void {
-    this.apartmentService.getApartments().then(heroes => this.heroes = heroes);
+    this.apartmentService.getApartments().then(heroes => this.apartments = heroes);
   }
 
   ngOnInit():void {

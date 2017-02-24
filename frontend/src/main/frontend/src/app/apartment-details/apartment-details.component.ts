@@ -16,17 +16,18 @@ export class ApartmentDetailsComponent implements OnInit {
   public isReadonly: boolean = true;
 
   @Input()
-  hero:Apartment;
+  apartment:Apartment;
 
-  constructor(private heroService:ApartmentService,
+  constructor(private apartmentService:ApartmentService,
               private route:ActivatedRoute,
               private location:Location) {
   }
 
   ngOnInit():void {
+    console.log(this.route.params);
     this.route.params
-      .switchMap((params:Params) => this.heroService.getHero(+params['id']))
-      .subscribe(hero => this.hero = hero)
+      .switchMap((params:Params) => this.apartmentService.getApartment(params['id']))
+      .subscribe(apartment => this.apartment = apartment)
   }
 
   goBack(): void {
@@ -34,7 +35,7 @@ export class ApartmentDetailsComponent implements OnInit {
   }
 
   save(): void{
-    this.heroService.update(this.hero)
+    this.apartmentService.update(this.apartment)
       .then(() => this.goBack());
   }
 }

@@ -33,7 +33,7 @@ export class ApartmentService {
       .catch(this.handleError);
   }
 
-  delete(id: number): Promise<void> {
+  delete(id: string): Promise<void> {
     const url = `${this.apiURL}/${id}`;
     return this.http.delete(url, {headers: this.headers})
       .toPromise()

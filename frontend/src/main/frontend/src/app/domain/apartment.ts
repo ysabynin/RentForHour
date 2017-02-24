@@ -1,5 +1,5 @@
 export class Apartment{
-  id: number;
+  id: string;
   name: string;
   phoneNumber: string;
   cost: number;
